@@ -87,14 +87,14 @@ function Navigation({
 
             </div>
             <div className='navigation-container oswald mb-4' style={{display:navDisplay}}>
-                {
+                {props.collectionList.length>0 &&
                     props.collectionList.map(collection => {
                         return (
 
                             <StyledLink to={`/collections/${collection.title}`} key={collection.title} onClick={
                                 () => window.location.href = `/collections/${collection.title}`
                             }>
-                                <div>{collection.title && collection.title.toUpperCase()}  </div>
+                                <div className='text-uppercase'>{collection.title && collection.title}  </div>
                             </StyledLink>
                             // <div onClick={
                             //         ()=>window.location.href=`/collections/${collection.title}`

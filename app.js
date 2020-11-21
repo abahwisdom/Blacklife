@@ -1,6 +1,10 @@
 const express= require('express');
 require('dotenv').config();
-// const pool= require('./db');
+const pool= require('./db');
+
+pool.on('connect', () => {
+    console.log('connected to database');
+    });
 
 // import routes
 const collection= require('./routes/collection');

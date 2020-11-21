@@ -5,13 +5,11 @@ import Collection from '../components/admin/collection/collection'
 import AdminLanding from '../components/admin/collection/AdminLanding'
 import NotFound from './404'
 import SignIn from '../components/admin/auth/pages/sign-in'
-import SignUp from '../components/admin/auth/pages/sign-up'
+// import SignUp from '../components/admin/auth/pages/sign-up'
 import store from '../redux/store';
 import { loadUser } from '../redux/actions/authActions.js';
 
-export default function Admin({
-
-}){
+export default function Admin(){
 
     useEffect(() => {
         store.dispatch(loadUser());
@@ -26,9 +24,9 @@ export default function Admin({
             <Route path='/admin/auth/sign-in'>
                 <SignIn/>
             </Route>
-            <Route path='/admin/auth/sign-up'>
+            {/* <Route path='/admin/auth/sign-up'>
                 <SignUp/>
-            </Route>
+            </Route> */}
             <Route path='/admin/collections/:id'>
                 <Collection/>
             </Route>

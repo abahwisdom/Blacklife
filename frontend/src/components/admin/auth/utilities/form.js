@@ -92,12 +92,12 @@ const MyForm=(props)=>{
                 className='or oswald'
                 />
 
-                {props.handleClickLabel!=='Sign In'&& <>
+                {/* {props.handleClickLabel!=='Sign In'&& <>
                 <div style={{color:'gray'}} >Already have an account?</div>
-                <StyledLink className='oswald' to='/admin/auth/sign-in'>Sign In</StyledLink>
+                <StyledLink className='oswald' to='/admin/auth/sign-in'>Sign In</StyledLink> */}
                 {/* <hr className="hr-text" data-content="OR"/> */}
-                </>
-                }
+                {/* </>
+                } */}
                 {props.handleClickLabel!=='Sign Up'&& 
                 <>
                 <div style={{color:'gray'}} >Dont have an account?</div>

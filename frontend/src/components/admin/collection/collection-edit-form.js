@@ -81,7 +81,7 @@ export default function CollectionEditForm({
 
         useEffect(()=>{
             try {
-                if (searchValue==''){
+                if (searchValue===''){
                 setDisplay('block')
             }
             else if(collection.title.toLowerCase().includes(searchValue.toLowerCase())===true){

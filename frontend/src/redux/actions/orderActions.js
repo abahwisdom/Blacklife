@@ -8,7 +8,7 @@ export const addOrder =(newOrder)=>(dispatch, getState)=>{
     const index= orderList.findIndex((product)=>{
         return product.product_uid===newOrder.product_uid
     })
-    if (index==-1){
+    if (index===-1){
         const newOrderList= orderList.concat(order);
     dispatch({
         type:ADD_ORDER,

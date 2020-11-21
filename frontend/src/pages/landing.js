@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Container } from 'react-bootstrap'
 import Axios from 'axios'
 import StyledLink from '../components/utilities/styledLink';
 
@@ -36,8 +35,6 @@ export default function Landing({
             setAllProducts(data);
         })
     },[])
-
-    const dummy='https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/1:1/w_1079,h_1079,c_limit/fullsizeoutput_6bcd_1_1080x.jpg'
 
     return(
         <>

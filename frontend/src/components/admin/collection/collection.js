@@ -4,14 +4,14 @@ import CollectionItem from './collection-item'
 import {fetchCollection} from '../../../redux/actions/collectionActions'
 import {connect} from 'react-redux'
 import { useParams, useHistory } from 'react-router-dom';
-import { Form, Jumbotron, Spinner, Container } from 'react-bootstrap';
+import { Form, Spinner, Container } from 'react-bootstrap';
 import { clearErrors } from '../../../redux/actions/errorActions';
 
 function Collection ({
     items,
     fetchCollection,
     isAuthenticated,
-    error,
+    // error,
     clearErrors
 }){
     const history=useHistory();
@@ -85,8 +85,8 @@ function Collection ({
 
 const mapStateToProps = (state) => ({
     items: state.collection.collection_products,
-    isAuthenticated: state.auth.isAuthenticated,
-    error: state.error
+    isAuthenticated: state.auth.isAuthenticated
+    // error: state.error
   });
   
 export default connect(mapStateToProps, { fetchCollection, clearErrors })(Collection);

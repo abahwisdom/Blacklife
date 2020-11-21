@@ -7,7 +7,7 @@ export default function CollectionItem ({item, searchValue}){
 
     useEffect(()=>{
         try {
-            if (searchValue==''){
+            if (searchValue===''){
             setDisplay('block')
         }
         else if(item.name.toLowerCase().includes(searchValue.toLowerCase())===true){

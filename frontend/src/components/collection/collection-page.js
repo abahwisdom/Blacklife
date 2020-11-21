@@ -2,7 +2,7 @@ import React, { useEffect, useState} from 'react'
 import CollectionItem from './collection-item'
 import Axios from 'axios';
 import { useParams } from 'react-router-dom';
-import { Jumbotron, Spinner } from 'react-bootstrap';
+import {Spinner } from 'react-bootstrap';
 
 export default function CollectionPage (){
 

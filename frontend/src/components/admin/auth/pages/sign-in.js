@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MyForm from '../utilities/form';
-import { Container, Alert, Spinner } from 'react-bootstrap';
+import { Container, Alert } from 'react-bootstrap';
 
 import { connect } from 'react-redux';
 import { login } from '../../../../redux/actions/authActions';
@@ -61,12 +61,6 @@ const SignIn=({
         //     setLoading(false)
         // };
       }, [error, isAuthenticated]);
-
-    // const [loading, setLoading]= useState(true);
-
-    // if (loading) {return(
-    //   <Container className='text-center' ><Spinner animation="border" variant="primary" className="align-middle spinner-app" role="status"/></Container>
-    // )}
 
     return(
         <>

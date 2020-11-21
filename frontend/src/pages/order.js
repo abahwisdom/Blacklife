@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import {fetchOrders} from '../redux/actions/orderActions'
 import {connect} from 'react-redux'
-import { Form, Modal, Button, Jumbotron } from 'react-bootstrap'
+import { Form, Button, Jumbotron } from 'react-bootstrap'
 
 function CartItem({
     product
@@ -109,7 +109,6 @@ function Order({
 }
 
 const mapStateToProps = (state) => ({
-    fetchedOrder: state.order.unfinishedOrder,
     orderId: state.order.latest_order_id.order_id,
     fetchedOrder: state.order.fetchedOrder
   });

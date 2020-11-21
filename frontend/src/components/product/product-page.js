@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useHistory } from 'react-router-dom';
-import {Container, Modal, Button, Jumbotron, Spinner} from 'react-bootstrap'
+import {Container, Modal, Button, Spinner} from 'react-bootstrap'
 
 import {fetchProduct} from '../../redux/actions/productActions'
 import {addOrder} from '../../redux/actions/orderActions'

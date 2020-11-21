@@ -2,6 +2,8 @@ const express= require('express');
 require('dotenv').config();
 const pool= require('./db');
 
+var path= require('path');
+
 pool.connect(function(err) {
     if(err) {
       return console.error('could not connect to postgres', err);

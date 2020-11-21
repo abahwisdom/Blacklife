@@ -1,0 +1,49 @@
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    grid-gap: 1rem;
+    background-color: black;
+    color: lightgray;
+    position: relative;
+    bottom:0;
+    min-height: 205px;
+    padding: 10px;
+}
+
+.right-foot{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+
+    h5{
+        font-family: 'Oswald';
+        text-transform: uppercase;
+        cursor: pointer;
+    
+    }
+
+    .footer-item{
+    text-align:left;
+    padding-bottom:10px;
+    cursor: pointer;
+    width: fit-content;
+
+    i{
+        padding-right:10px
+    }
+}
+}
+
+.left-foot h2{
+    color: #BED32C;
+    padding-bottom: 2em;
+    font-family: cursive;
+}
+
+.push{
+    z-index: -300;
+    position: relative;
+    min-height: 430px;
+}
+
+

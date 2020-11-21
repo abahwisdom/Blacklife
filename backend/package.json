@@ -1,0 +1,25 @@
+{
+  "name": "black-life",
+  "version": "1.0.0",
+  "description": "e-commerce",
+  "main": "app.js",
+  "scripts": {
+    "client-install": "npm install --prefix ../frontend",
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm start --prefix ../frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix ../frontend && npm run build --prefix ../frontend"
+  },
+  "author": "Abah",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^5.3.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.4.2",
+    "uuid": "^8.3.1"
+  }
+}

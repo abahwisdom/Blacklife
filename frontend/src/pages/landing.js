@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Axios from 'axios'
 import StyledLink from '../components/utilities/styledLink';
+import Showcase from '../components/landing/showcase';
 
 export default function Landing({
     collectionList
@@ -39,9 +40,9 @@ export default function Landing({
     return(
         <>
         
-        <div>
+        <div style={{padding:'10px'}}>
         
-            <div className='large-image-contain pr-4 pl-4'>
+            {/* <div className='large-image-contain pr-4 pl-4'>
                 <div className='image-contain'>
                     <StyledLink to={`/collections/${collectionList.length>0 && collectionList[0].title}`}>
                         <div style={{position:'relative'}}>
@@ -71,12 +72,24 @@ export default function Landing({
                         </div>
                     </StyledLink>
                 </div>
-            </div>
+            </div> */}
         
-        <h1 className='oswald text-center landing-name'>blacklife</h1>
+        {/* <h1 className='oswald text-center landing-name'>blacklife</h1> */}
         
+        <div className='showcase-contain'>
+            {
+                allProducts.map((product, index)=>{
+                    if (index<12){
+                      return(
+                        <Showcase product={product} allProducts={allProducts}/>
+                    )  
+                    }
+                    
+                })
+            }
+        </div>
 
-        <div className='small-image-contain pr-4 pl-4 oswald'>
+        {/* <div className='small-image-contain pr-4 pl-4 oswald'>
                 <div className='image-contain'>
                 <StyledLink to={`/products/${allProducts.length>0? allProducts[4].product_uid:''}`}>
                         <div>
@@ -190,7 +203,7 @@ export default function Landing({
                     </StyledLink>
                 </div>
             </div>
-            
+             */}
         </div>
         
        

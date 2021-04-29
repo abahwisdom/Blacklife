@@ -91,3 +91,34 @@
     padding: 0px 25px;
     background-color: white;
 }
+
+.showcase-contain{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-gap: 30px;
+
+    @media(max-width:450px){
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    }
+}
+
+.showcase-unit{
+    // max-width: 300px;
+    margin-right:0px;
+    text-align: center;
+    // padding:20px;
+    border: 10px solid black;
+
+    img{
+        max-width: 100%;
+        object-fit: cover;
+        object-position: top;
+        padding: 20px;
+    }
+}
+
+.showcase-text{
+    background-color: black;
+    color: white;
+    padding: 20px 0 0;
+}

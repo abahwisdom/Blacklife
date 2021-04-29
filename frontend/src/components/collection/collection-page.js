@@ -58,10 +58,11 @@ export default function CollectionPage (){
    
 
     return(
-        <>
+        <><div style={{padding:'10px'}}>
         {items.length>0?
 
         <>
+        
         <div className='collection-name oswald h1 text-center text-uppercase m-auto pb-2 pt-4'>{items.length>0?items[0].title:''}</div>
         <div className='collection-description text-center m-auto' style={{maxWidth: '400px'}}>{items.length>0?items[0].description:''}</div>
         <div className='sort-container oswald pl-2 pr-2 mt-4'>
@@ -73,7 +74,7 @@ export default function CollectionPage (){
                 <div className='sort-item'>Newest first</div> */}
             </div>
         </div>
-        <div className='items-container grid-collection text-center oswald mt-4 mb-4 ml-2 mr-2'>
+        <div className='showcase-contain'>
             {
                 items.map(item=>{
                     return(
@@ -89,7 +90,7 @@ export default function CollectionPage (){
         : <div className='m-auto text-center spinner-div' ><Spinner animation="grow" variant='dark'></Spinner></div> 
     }
         
-        
+        </div>
         </>
     )
 }

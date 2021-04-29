@@ -17,3 +17,6 @@ export default function CollectionItem ({item}){
         </>
     )
 }
+
+
+// className='items-container grid-collection text-center oswald mt-4 mb-4 ml-2 mr-2'

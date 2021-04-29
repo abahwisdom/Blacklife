@@ -60,6 +60,7 @@ function Navigation({
     // },[])
 
     // const [windowWidth, setWindow]= useState('');
+    // console.log(props.collectionList.slice().reverse())
 
     return (
         <>
@@ -94,7 +95,7 @@ function Navigation({
             </div>
             <div className='navigation-container oswald mb-4' style={{display:navDisplay}}>
                 {props.collectionList.length>0 &&
-                    props.collectionList.map(collection => {
+                    props.collectionList.slice().reverse().map(collection => {
                         return (
 
                             <StyledLink to={`/collections/${collection.title}`} key={collection.title} onClick={

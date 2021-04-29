@@ -95,6 +95,14 @@ export default function CollectionEditForm({
             
         },[searchValue, collection.title])
 
+        function deleteCollection(){
+            // console.log(`api/collection/delete/${id}`)
+            Axios.delete(`api/collection/delete/${collection.collection_uid}`)
+            .then((res)=>{
+                console.log(res)
+                })
+        }
+
 
     return(
         <>
@@ -174,7 +182,9 @@ export default function CollectionEditForm({
                                 </Form>
                                 
                             </div>
+                            <Button variant='danger' onClick={deleteCollection}>Delete Collection</Button>
                         </Container>
+                        
                     </Accordion.Collapse>
                     
                 </Accordion> 

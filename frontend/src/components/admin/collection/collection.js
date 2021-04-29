@@ -4,7 +4,7 @@ import CollectionItem from './collection-item'
 import {fetchCollection} from '../../../redux/actions/collectionActions'
 import {connect} from 'react-redux'
 import { useParams, useHistory } from 'react-router-dom';
-import { Form, Spinner, Container } from 'react-bootstrap';
+import { Form, Spinner, Container} from 'react-bootstrap';
 import { clearErrors } from '../../../redux/actions/errorActions';
 
 function Collection ({
@@ -48,6 +48,7 @@ function Collection ({
 
     const [loading, setLoading]= useState(true);
 
+
   if (loading) {return(
     <Container className='text-center' ><Spinner animation="border" variant="primary" className="align-middle spinner-app" role="status"/></Container>
   )}
@@ -57,6 +58,7 @@ function Collection ({
         {items.length>0 ?
         <>
         <div className='collection-name oswald h1 text-center m-auto pb-2 pt-4 text-uppercase'>{items.length>0?items[0].title:''}</div>
+        
         <div className='collection-description text-center m-auto' style={{maxWidth: '500px', padding: '0 10px'}}>{items.length>0?items[0].description:''}</div>
         <Form className='oswald text-center mb-2 mt-2 pl-2 pr-2 text-uppercase' style={{maxWidth: '400px', margin: 'auto'}}>
                    <Form.Group className='mt-auto mb-auto'>

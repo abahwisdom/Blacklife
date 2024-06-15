@@ -6,7 +6,7 @@
   "scripts": {
     "client-install": "npm install --prefix frontend",
     "start": "node app.js",
-    "server": "nodemon app.js",
+    "server": "npx nodemon app.js",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
@@ -21,5 +21,8 @@
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.4.2",
     "uuid": "^8.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
   }
 }

@@ -7,10 +7,10 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.20.0",
+    "black-life": "file:..",
     "bootstrap": "^4.5.3",
     "emailjs-com": "^2.6.4",
     "firebase": "^8.0.2",
-    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.3.0",
     "react-dom": "^16.13.1",
@@ -20,6 +20,7 @@
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
+    "sass": "^1.77.5",
     "styled-components": "^5.2.1",
     "validator": "^13.1.17"
   },
@@ -44,8 +45,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000",
-  "engines": {
-      "node": "16.x"
-    }
+  "proxy": "http://localhost:5000"
 }

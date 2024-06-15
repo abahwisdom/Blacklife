@@ -98,9 +98,11 @@ function Navigation({
                     props.collectionList.slice().reverse().map(collection => {
                         return (
 
-                            <StyledLink to={`/collections/${collection.title}`} key={collection.title} onClick={
-                                () => window.location.href = `/collections/${collection.title}`
-                            }>
+                            <StyledLink to={`/collections/${collection.title}`} key={collection.title} 
+                            // onClick={
+                            //     () => window.location.href = `/collections/${collection.title}`
+                            // }
+                            >
                                 <div className='text-uppercase'>{collection.title && collection.title}  </div>
                             </StyledLink>
                             // <div onClick={

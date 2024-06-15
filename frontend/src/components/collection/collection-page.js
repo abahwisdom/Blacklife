@@ -20,7 +20,7 @@ export default function CollectionPage (){
     useEffect(()=>{
         fetchCollection(id)
 
-    },[]);
+    },[id]);
 
     function sortPriceDesc(){
         async function firstSort(){
